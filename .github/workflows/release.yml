@@ -4,16 +4,14 @@ on:
   push:
     branches:
       - main
-      - feature/github_actions
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: write-all
+    
     steps:
       - uses: actions/checkout@v3
-        with:
-          submodules: true
-      - run: g++ simple_allocator.cpp -std=c++17
       - name: run-run
+        run: g++ simple_allocator.cpp -std=c++17
+      
