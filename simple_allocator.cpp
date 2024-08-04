@@ -38,7 +38,7 @@ struct pool_allocator {
 
 int main(int, char *[]) {
     pool_allocator<int> alloc_;
-    std::set<int, pool_allocator<int>> pool_list(alloc_);   
+    std::list<int, pool_allocator<int>> pool_list(alloc_);   
 
     std::cout << "Hello" << std::endl;
 
