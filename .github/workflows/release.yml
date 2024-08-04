@@ -4,6 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - actions: actions/checkout@v2
       - name: run__
         run: g++ simple_allocator.cpp -std=c++17
       
