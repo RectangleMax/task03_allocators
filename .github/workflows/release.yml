@@ -1,17 +1,9 @@
-name: 'C++ CI'
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
+name: 'my Action'
+on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
-      - uses: actions/checkout@v3
-      - name: run-run
+      - name: run__
         run: g++ simple_allocator.cpp -std=c++17
       
